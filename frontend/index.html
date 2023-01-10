@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Vue app</title>
+</head>
+<body>
+    <h1 class="text-center ">Welcome to our Lessons shopping website</h1>
+    <div class="content">
+        <div id="App">
+            <div class="main-content-home">
+                <div class="lessons">
+                    <div v-for="lesson in lessons" :key="lesson.id" class="lesson border border-primary rounded">
+                        <div class="lesson-content">
+                            <h4>Subject: {{ lesson.price }}</h4>
+                            <h4>Loacation: {{ lesson.location }}</h4>
+                            <h4>Price: <i class="fas fa-pound-sign"></i> {{ lesson.price }}</h4>
+                        </div>
+                        <!-- <div class="lesson-img-div">
+                            <img class="lesson-img" :src="lesson.img" :alt="lesson.subject">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./jquery-1.12.4.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./javascript.js"></script>
+</body>
+</html>
